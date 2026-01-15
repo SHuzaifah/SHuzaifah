@@ -1,6 +1,6 @@
 # 👋 Hey there, I'm Syed Huzaif
 
-🚀 College student at **St Joseph’s Pre-University College**  
+🚀 Computer Science student at **St Joseph’s Pre-University College**  
 🧠 Curious mind exploring **AI, Web Dev, and Software Engineering**  
 🐍 Currently sharpening my skills in **Python**
 
