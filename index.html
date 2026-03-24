@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyFlow — Focused Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar glass-card">
+        <div>
+          <p class="eyebrow">Good Morning, Huzaifah</p>
+          <h1>StudyFlow</h1>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      </header>
+
+      <main>
+        <section class="page active" data-page="home">
+          <section class="hero glass-card">
+            <div>
+              <p class="eyebrow">Daily Overview</p>
+              <h2>You're 72% on track today</h2>
+              <p class="muted">2 tasks due • 1 revision block pending</p>
+            </div>
+            <div class="progress-ring" aria-hidden="true">
+              <span>72%</span>
+            </div>
+          </section>
+
+          <section class="grid-two">
+            <article class="glass-card timer-card">
+              <p class="eyebrow">Focus Timer</p>
+              <h3 id="timer-display">25:00</h3>
+              <div class="timer-actions">
+                <button id="start-timer">Start</button>
+                <button id="reset-timer" class="ghost">Reset</button>
+              </div>
+              <div class="chips">
+                <button class="chip active" data-minutes="25">Pomodoro</button>
+                <button class="chip" data-minutes="50">Deep Focus</button>
+                <button class="chip" data-minutes="15">Quick Review</button>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <p class="eyebrow">Streak & Insights</p>
+              <h3>14-day streak 🔥</h3>
+              <ul class="list compact">
+                <li>Best slot: 6:00 PM – 8:00 PM</li>
+                <li>Most productive subject: Physics</li>
+                <li>Smart tip: revise Chemistry tonight</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="glass-card">
+            <div class="section-head">
+              <h3>Upcoming Tasks</h3>
+              <button class="text-button">View all</button>
+            </div>
+            <ul class="task-list">
+              <li>
+                <div>
+                  <strong>Math Assignment — Integration</strong>
+                  <p>Due 5:00 PM • High Priority</p>
+                </div>
+                <span class="priority high">High</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Biology Revision Block</strong>
+                  <p>7:30 PM • Medium Priority</p>
+                </div>
+                <span class="priority medium">Med</span>
+              </li>
+              <li>
+                <div>
+                  <strong>History Flashcards</strong>
+                  <p>9:00 PM • Low Priority</p>
+                </div>
+                <span class="priority low">Low</span>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="page" data-page="assistant">
+          <section class="glass-card">
+            <p class="eyebrow">AI Study Assistant</p>
+            <h2>Ask, summarize, generate quizzes</h2>
+            <div class="assistant-window">
+              <div class="bubble ai">Summarized Chapter 4 into 8 key points. Want flashcards too?</div>
+              <div class="bubble user">Yes, and generate a 10-question test based on my syllabus.</div>
+              <div class="bubble ai">Done ✅ Also scheduled a revision reminder for Thursday.</div>
+            </div>
+            <div class="assistant-tools">
+              <button>📄 Upload PDF</button>
+              <button>🖼 Upload Image</button>
+              <button>🎙 Voice Input</button>
+              <button>🔊 Read Aloud</button>
+            </div>
+          </section>
+
+          <section class="grid-two">
+            <article class="glass-card">
+              <h3>Context-Aware Actions</h3>
+              <ul class="list">
+                <li>Auto-links answers to current subjects</li>
+                <li>Creates syllabus-based quizzes instantly</li>
+                <li>Converts notes into spaced-repetition cards</li>
+              </ul>
+            </article>
+            <article class="glass-card">
+              <h3>Quick Actions</h3>
+              <div class="chips wrap">
+                <button class="chip">Summarize Notes</button>
+                <button class="chip">Generate Flashcards</button>
+                <button class="chip">Create Quiz</button>
+                <button class="chip">Explain with Diagram</button>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" data-page="calendar">
+          <section class="glass-card">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Calendar & Scheduling</p>
+                <h2>Week 12 • March 2026</h2>
+              </div>
+              <div class="view-switch">
+                <button class="chip active">Weekly</button>
+                <button class="chip">Monthly</button>
+              </div>
+            </div>
+            <div class="calendar-grid">
+              <div class="slot strong">Mon<br /><span>Math • 4 PM</span></div>
+              <div class="slot">Tue<br /><span>Physics Lab • 11 AM</span></div>
+              <div class="slot">Wed<br /><span>AI Quiz • 9 PM</span></div>
+              <div class="slot strong">Thu<br /><span>Chem Revision • 7 PM</span></div>
+              <div class="slot">Fri<br /><span>Mock Test • 5 PM</span></div>
+              <div class="slot">Sat<br /><span>Project Work • 2 PM</span></div>
+              <div class="slot">Sun<br /><span>Reset & Planning</span></div>
+            </div>
+          </section>
+
+          <section class="grid-two">
+            <article class="glass-card">
+              <h3>Smart Planner</h3>
+              <ul class="list compact">
+                <li>Auto-scheduled 2 revision blocks before exam</li>
+                <li>Detected overload on Friday, moved low-priority task</li>
+                <li>Exam countdown: 9 days remaining</li>
+              </ul>
+            </article>
+            <article class="glass-card">
+              <h3>Priority Reminders</h3>
+              <ul class="task-list small">
+                <li><span class="dot high"></span>Finish Math Assignment</li>
+                <li><span class="dot medium"></span>Review Physics Formula Sheet</li>
+                <li><span class="dot low"></span>Organize Notion notes</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" data-page="integrations">
+          <section class="glass-card">
+            <p class="eyebrow">Integrations Hub</p>
+            <h2>All your resources, one workspace</h2>
+            <div class="integration-grid">
+              <div class="integration">YouTube Lectures</div>
+              <div class="integration">ChatGPT Support</div>
+              <div class="integration">Notion Notes</div>
+              <div class="integration">Whiteboard Tools</div>
+              <div class="integration">Brainly Q&A</div>
+              <div class="integration">Cloud Drive</div>
+            </div>
+            <label class="search-field">
+              <span>Unified Search</span>
+              <input type="text" placeholder="Search notes, videos, Q&A, bookmarks..." />
+            </label>
+          </section>
+
+          <section class="grid-two">
+            <article class="glass-card">
+              <h3>Bookmarks</h3>
+              <ul class="list compact">
+                <li>Electromagnetism Crash Course (YouTube)</li>
+                <li>Organic Reactions Cheat Sheet (Notion)</li>
+                <li>AI Prompt Templates (ChatGPT)</li>
+              </ul>
+            </article>
+            <article class="glass-card">
+              <h3>System Features</h3>
+              <ul class="list compact">
+                <li>Offline note access with auto-sync</li>
+                <li>Gamification coins + daily rewards</li>
+                <li>Focus mode with app/site blocker</li>
+                <li>Light / dark adaptive theme</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+      </main>
+
+      <nav class="bottom-nav glass-card" aria-label="Primary navigation">
+        <button class="nav-item active" data-target="home">Home</button>
+        <button class="nav-item" data-target="assistant">AI</button>
+        <button class="nav-item" data-target="calendar">Calendar</button>
+        <button class="nav-item" data-target="integrations">Hub</button>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
